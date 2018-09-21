@@ -532,7 +532,7 @@ input[type="submit"]:focus {
 /* Layout
 -------------------------------------------------------------- */
 .main-content {
-	padding: 100px 0;
+	padding: 100px 0 50px 0;
 }
 
 .main-content.has-heading {

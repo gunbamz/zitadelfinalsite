@@ -1,9 +1,4 @@
-/**
-  * Name: ZupaHealth
-  * Version: 1.1
-  * Author: ROLLTHEMES
-  * Author URI: http://www.rollthemes.com
-*/
+
 
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,400italic,700");
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,300italic,400,500,700,700italic");
@@ -16,7 +11,7 @@
 @import url("cubeportfolio.min.css");
 @import url("magnific-popup.css");
 @import url("shortcodes.css");
-@import url("woocommerce.css");
+
 
 
 /*
@@ -329,12 +324,20 @@ hr {
 .alert{
 	text-align: center;
 	padding:10px;
-	background:#bbf9b0;
+	background:#017504;
 	color:#fff;
 	margin-bottom:10px;
 	display:none;
   }
 
+  .enquiry{
+	text-align: center;
+	padding:10px;
+	background:#ccf9cd;
+	color:#fff;
+	margin-top:10px;
+	display:none;
+  }
 ul,
 ol {
 	padding: 0;
@@ -501,7 +504,7 @@ button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-	background-color: #2d2d2d;
+	background-color: #018e04;
 	outline: 0;
 }
 
@@ -509,7 +512,7 @@ button:focus,
 input[type="button"]:focus,
 input[type="reset"]:focus,
 input[type="submit"]:focus {
-	background-color: #006ab4;
+	background-color: #115d17;
 	outline: 0;
 }
 
@@ -1050,23 +1053,23 @@ input[type="submit"]:focus {
 /* Inner pages */
 .inner-page .header-wrap {
 	height: 200px;
-	background: url(../img/page-slide-1.jpg) no-repeat center center;
+	background: url(../img/bgeye.png) no-repeat center center;
 }
 
 .inner-page.about .header-wrap {
-	background: url(../img/page-slide-2.jpg) no-repeat center center;
+	background: url(../img/bgeye.png) no-repeat center center;
 }
 
 .inner-page.gal .header-wrap {
-	background: url(../img/page-slide-3.jpg) no-repeat center center;
+	background: url(../img/bgeye.png) no-repeat center center;
 }
 
 .inner-page.contact .header-wrap {
-	background: url(../img/page-slide-4.jpg) no-repeat center center;
+	background: url(../img/bgeye.png) no-repeat center center;
 }
 
 .inner-page.shop .header-wrap {
-	background: url(../img/page-slide-5.jpg) no-repeat center center;
+	background: url(../img/bgeye.png) no-repeat center center;
 }
 
 .inner-page .header-wrap.style2 {
@@ -1211,7 +1214,7 @@ input[type="submit"]:focus {
 
 #main-nav .sub-menu li:hover > a {
 	color: #fff;
-	background-color: #006ab4;
+	background-color: #115d17;
 }
 
 #main-nav .sub-menu li:hover:after {
@@ -2954,5 +2957,5 @@ input[type="submit"]:focus {
 
 .bottom .socials li a:hover,
 .bottom .socials li.hover a {
-	background-color: #006ab4;	
+	background-color: #018e04;	
 }

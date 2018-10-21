@@ -18,6 +18,7 @@ var messagesRef = firebase.database().ref('messages');
 // Listen for form submit
 document.getElementById('appointment').addEventListener('submit', submitForm);
 
+
 // Submit form
 function submitForm(e){
   e.preventDefault();
@@ -49,7 +50,10 @@ function submitForm(e){
   document.getElementById('appointment').reset();
 
 }
-// Function to get get form values
+
+
+
+// Function to get form values
 function getInputVal(id){
   return document.getElementById(id).value;
 }
@@ -67,3 +71,4 @@ function saveMessage(firstn, lastn, inputnumber, inputemail,  persontosee, appoi
     message:message
   });
 }
+

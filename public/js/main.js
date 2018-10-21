@@ -496,93 +496,7 @@
         });
     };
 
-    var ajaxContactForm = function() {
-        if ( $().validate ) {        
-            $('.roll-contact-form').each(function() {
-                $(this).validate({
-                    submitHandler: function( form ) {
-                        var $form = $(form),
-                            str = $form.serialize(),
-                            loading = $('<div />', { 'class': 'loading' });
-
-                        $.ajax({
-                            type: "POST",
-                            url:  $form.attr('action'),
-                            data: str,
-                            beforeSend: function () {
-                                $form.find('.send-wrap').prepend(loading);
-                                $form.find('.roll-alert').remove();
-                            },
-                            success: function( msg ) {
-                                var result, cls;
-
-                                if ( msg == 'Success' ) {
-                                    result = 'Your message has been sent. Thank you!';
-                                    cls = 'msg-success';
-                                } else {
-                                    result = 'Error sending email.';
-                                    cls = 'msg-error';
-                                }
-
-                                $form.prepend(
-                                    $('<div />', {
-                                        'class': 'roll-alert ' + cls,
-                                        'text' : result
-                                    }).append(
-                                        $('<a class="remove" href="#"><i class="fa fa-close"></i></a>')
-                                    )
-                                );
-
-                                $form.find(':input').not('.submit').val('');
-                            },
-                            complete: function( xhr, status, error_thrown ) {
-                                $form.find('.loading').remove();
-                            }
-                        });
-                    }
-                });
-            });
-        }
-        $(document).on('click', '.roll-alert .remove', function(e) {
-            $(this).closest('.roll-alert').remove();
-            e.preventDefault();
-        })
-    };
-
-    var googleMap = function() {
-        if ( $().gmap3 ) {
-            $("#map").gmap3({
-                map:{
-                    options:{
-                        zoom: 14,
-                        mapTypeId: 'zupahealth_style',
-                        mapTypeControlOptions: {
-                            mapTypeIds: ['zupahealth_style', google.maps.MapTypeId.SATELLITE, google.maps.MapTypeId.HYBRID]
-                        },
-                        scrollwheel: true
-                    }
-                },
-                getlatlng:{
-                    address:  "New York, NY 10017 United States",
-                    callback: function(results) {
-                        if ( !results ) return;
-                            $(this).gmap3('get').setCenter(new google.maps.LatLng(results[0].geometry.location.lat(), results[0].geometry.location.lng()));
-                            $(this).gmap3({
-                            marker:{
-                            latLng:results[0].geometry.location
-                            }
-                        });
-                    }
-                },
-                styledmaptype:{
-                    id: "zupahealth_style",
-                    options:{
-                        name: "ZupaHealth Map"
-                    },
-                },
-            });
-        }
-    };
+  
 
     var parallax = function() {
         if ( $('.parallax').length > 0 && isMobile.any() == null ) {
@@ -785,8 +699,6 @@
         toggles();
         progressBar();
         tabs();
-        ajaxContactForm();
-        googleMap();
         parallax();
         loadPage();
         priceFilter();
